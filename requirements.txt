@@ -1,0 +1,6 @@
+faster-whisper==1.0.3
+sounddevice==0.4.7
+keyboard==0.13.5
+pygetwindow==0.0.9
+rapidfuzz==3.13.0
+numpy==1.26.4

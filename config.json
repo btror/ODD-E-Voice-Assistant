@@ -1,0 +1,8 @@
+{
+  "playlists": {
+    "general": "spotify:playlist:<insert playlist id here>",
+    "mustang": "spotify:playlist:<insert playlist id here>"
+  },
+  "whisper_model": "small",
+  "push_to_talk_key": "f9"
+}

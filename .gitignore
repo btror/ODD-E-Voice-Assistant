@@ -1,0 +1,46 @@
+# venvs / caches
+venv/
+.hf_cache/
+hfcache/
+__pycache__/
+*.pyc
+
+# local configs & logs
+error.log
+runlog.txt
+*.wav
+*.mp3
+.env
+
+# editor junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+
+
+# --- Virtual environment ---
+venv/
+.env/
+.hfcache/
+__pycache__/
+*.pyc
+
+# --- Local cache / data ---
+*.log
+runlog.txt
+
+# --- Whisper / model cache ---
+# Hugging Face cache (large model files, don’t upload!)
+hfcache/
+
+# --- OS / IDE junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Env secrets ---
+.env
