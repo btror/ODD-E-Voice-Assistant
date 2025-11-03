@@ -29,7 +29,16 @@ The entire process is **100% local** - your voice never leaves your machine. Whi
 - Python 3.9+
 - Windows 10/11
 - Spotify Desktop App installed
-- NVIDIA GPU (optional, for faster transcription)
+- NVIDIA GPU with CUDA (optional, for faster transcription)
+  - **Note:** If you want GPU acceleration, you'll need to install:
+    - NVIDIA GPU drivers
+    - **CUDA Toolkit** - Version **12.6 or 13.0** (required)
+      - CUDA 12.6 is the minimum required version
+      - CUDA 13.0 is also supported
+      - Download from: [NVIDIA CUDA Downloads](https://developer.nvidia.com/cuda-downloads)
+    - **cuDNN** - Version 9.14 (optional but recommended for optimal performance)
+      - Download from: [NVIDIA cuDNN Downloads](https://developer.nvidia.com/cudnn)
+  - **No GPU?** The assistant works perfectly on CPU - just add `--cpu` flag or let it auto-detect
 
 ## Installation
 
@@ -120,6 +129,9 @@ The project uses **OpenAI's Whisper** - a state-of-the-art speech recognition mo
 ### Performance Notes
 
 - **GPU Recommended**: Transcription is 5-10x faster with CUDA
+  - Requires **CUDA 12.6 and 13.0** (separate installation, not included in pip packages)
+  - Automatically falls back to CPU if CUDA unavailable or wrong version
+  - Use `--cpu` flag to force CPU mode
 - **Model Size Trade-off**: 
   - `tiny`/`base` - Fastest, less accurate
   - `small` - Balanced (recommended)
@@ -153,8 +165,19 @@ odd-e-ai/
 - Use `--mic <index>` to specify device explicitly
 
 **CUDA/GPU errors:**
-- Use `--cpu` flag to force CPU mode
-- Ensure CUDA drivers are installed if using GPU
+- Use `--cpu` flag to force CPU mode (no installation needed)
+- If you want GPU acceleration:
+  - Install NVIDIA GPU drivers (latest compatible version)
+  - Install **CUDA Toolkit 12.6 and 13.0** (required - minimum 12.6) from [NVIDIA's website](https://developer.nvidia.com/cuda-downloads)
+    - CUDA 12.6 is the minimum required version for faster-whisper
+    - CUDA 13.0 is also supported
+  - Install **cuDNN 9.14** for optimal performance (optional but recommended)
+  - The code automatically detects and uses CUDA if available
+- **Verify CUDA installation:**
+  ```powershell
+  nvcc --version  # Should show CUDA 12.6 and 13.0
+  ```
+- The assistant works fine on CPU - GPU is optional for speed
 
 **Spotify not responding:**
 - Ensure Spotify desktop app is installed
