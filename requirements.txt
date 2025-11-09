@@ -4,3 +4,5 @@ keyboard==0.13.5
 pygetwindow==0.0.9
 rapidfuzz==3.13.0
 numpy==1.26.4
+pyautogui==0.9.54
+Pillow==10.0.0

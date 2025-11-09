@@ -79,7 +79,9 @@ Create or edit `config.json` in the project root:
 ### Basic Usage
 
 ```powershell
-python -u .\assistant.py --hotkey f9 --mic 25 --model small --compute float16
+python -u .\assistant.py --hotkey f9 --mic 25 --model small --compute float16 # uses UI navigation tools
+
+python -u .\assistant_api.py --hotkey f9 --mic 25 --model small --compute float16 # uses spotify api
 ```
 
 ### Command-Line Options

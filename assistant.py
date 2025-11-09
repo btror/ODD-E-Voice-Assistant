@@ -93,10 +93,11 @@ def handle_intent(typ: str, arg: str, args):
     if typ == "transport":
         media_transport(arg)
     elif typ == "playlist":
+        # "play my playlist" → open and auto-play
         ensure_spotify_running()
         bring_spotify_to_front()
         if arg:
-            open_spotify_uri(arg)
+            open_spotify_uri(arg, auto_play=True)
         else:
             print("[assistant] Missing playlist URI.")
     elif typ == "song":
