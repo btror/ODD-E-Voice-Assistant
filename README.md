@@ -1,3 +1,5 @@
+# WIP - just messing around
+
 # ODD-E Spotify Voice Assistant
 
 A hands-free voice-controlled Spotify assistant that runs entirely on your local machine. Control Spotify with natural voice commands without needing the Spotify API or any cloud services.
